@@ -30,23 +30,17 @@ const Content = styled.div`
   outline: 4px solid ${GOLD};
 `;
 
-const H1 = styled.div`
-  font-family: "Limelight", cursive;
-  font-size: 1.5rem;
-`;
-
 const H2 = styled.div`
   font-family: "Limelight", cursive;
-  //   font-family: "Comfortaa", cursive;
   font-weight: 700;
   font-size: 1.5rem;
-  line-height: 1.75rem;
+  margin-bottom: 0.4rem;
 `;
 
 const BODY = styled.div`
-  line-height: 1.1rem;
   font-weight: 500;
   font-size: 1rem;
+  margin-bottom: 0.2rem;
   font-family: "Comfortaa", cursive;
 `;
 
@@ -63,7 +57,7 @@ const LOGO = styled.img`
 `;
 
 const DrinkContainer = styled.div`
-  margin-bottom: 2em;
+  margin-bottom: 2.5rem;
 `;
 
 const Drink = ({ drink }: { drink: Cocktail }) => (
