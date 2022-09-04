@@ -1,0 +1,29 @@
+{
+  "id": "19",
+  "name": "Espresso Martini",
+  "description": "Coffee and Booze, highs and lows, fire and ice.",
+  "ingredients": [
+    {
+      "name": "Vodka",
+      "unit": "part",
+      "value": 2
+    },
+    {
+      "name": "Kahlúa",
+      "unit": "part",
+      "value": 0.5
+    },
+    {
+      "name": "Espresso",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Simple Syrup",
+      "unit": "part",
+      "value": 0.5
+    }
+  ],
+  "servingGlassType": "martini",
+  "notes": ""
+}

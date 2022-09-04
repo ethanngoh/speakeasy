@@ -1,0 +1,24 @@
+{
+  "id": "15",
+  "name": "Lemonade Sour",
+  "description": "As if lemons were not sour enough.",
+  "ingredients": [
+    {
+      "name": "Bourbon",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Grand Marnier",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Lemonade",
+      "unit": "part",
+      "value": 3
+    }
+  ],
+  "servingGlassType": "lowball",
+  "notes": ""
+}

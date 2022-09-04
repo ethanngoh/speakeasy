@@ -1,0 +1,29 @@
+{
+  "id": "18",
+  "name": "Melting Snow",
+  "description": "雪は溶けていますか?",
+  "ingredients": [
+    {
+      "name": "Sake",
+      "unit": "part",
+      "value": 2
+    },
+    {
+      "name": "Grand Marnier",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Lemon Juice",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Grenadine",
+      "unit": "dash",
+      "value": 1
+    }
+  ],
+  "servingGlassType": "lowball",
+  "notes": "Add all ingredients (except grenadine) into a cocktail shaker and shake gently with ice. Strain into a salt rimmed old-fashioned glass. Add grenadine and serve."
+}

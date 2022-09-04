@@ -1,0 +1,39 @@
+{
+  "id": "16",
+  "name": "Suffering Bastard",
+  "description": "People in the 50s were dark and depressed. Ode to our predecessors!",
+  "ingredients": [
+    {
+      "name": "Bourbon",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Gin",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Lime Juice",
+      "unit": "part",
+      "value": 0.5
+    },
+    {
+      "name": "Angostura Bitters",
+      "unit": "dash",
+      "value": 2
+    },
+    {
+      "name": "Ginger Beer",
+      "unit": "top-off",
+      "value": 1
+    },
+    {
+      "name": "Mint",
+      "unit": "count",
+      "value": 1
+    }
+  ],
+  "servingGlassType": "highball",
+  "notes": ""
+}

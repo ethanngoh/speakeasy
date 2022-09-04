@@ -1,0 +1,34 @@
+{
+  "id": "20",
+  "name": "Passion Fruit Excuse",
+  "description": "Coffee and Booze, highs and lows, fire and ice.",
+  "ingredients": [
+    {
+      "name": "White Rum",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Triple Sec",
+      "unit": "part",
+      "value": 0.5
+    },
+    {
+      "name": "Passion Fruit Tea",
+      "unit": "part",
+      "value": 4
+    },
+    {
+      "name": "Lime Juice",
+      "unit": "part",
+      "value": 0.5
+    },
+    {
+      "name": "Orange Bitters",
+      "unit": "dash",
+      "value": 1
+    }
+  ],
+  "servingGlassType": "highball",
+  "notes": ""
+}

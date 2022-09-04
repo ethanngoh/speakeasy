@@ -1,0 +1,19 @@
+{
+  "id": "17",
+  "name": "Carajillo",
+  "description": "Hey its that drink from the Jose Andreas restaurant in the Aria. We finally remember the name!",
+  "ingredients": [
+    {
+      "name": "Espresso",
+      "unit": "part",
+      "value": 2
+    },
+    {
+      "name": "Liquor 43",
+      "unit": "part",
+      "value": 1
+    }
+  ],
+  "servingGlassType": "lowball",
+  "notes": "Fill glass with ice, pull Espresso into glass. Add Liquor 43 and stir."
+}
