@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { FancyBorder } from "../components/fancyBorder";
 
 import * as alcoholicDrinks from "../data/cocktails";
 import * as nonAlcoholicDrinks from "../data/nonAlcoholic";
@@ -23,9 +24,5 @@ export const Recipe = () => {
 
   const appropriateDrink: CocktailRaw = allOptions[0];
 
-  return (
-    <>
-      ID {params.cocktailId} {JSON.stringify(appropriateDrink)}
-    </>
-  );
+  return <FancyBorder>{appropriateDrink.name}</FancyBorder>;
 };

@@ -1,36 +1,11 @@
 import styled from "styled-components";
-import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { CocktailRaw } from "../model/cocktail";
 
 import * as alcoholicDrinks from "../data/cocktails";
 import * as nonAlcoholicDrinks from "../data/nonAlcoholic";
 import { GRAY_RANGE } from "../colors";
 import { SearchFilter } from "../components/searchFilter";
-
-const GOLD = "#EABC2A";
-const BLUE = "#0B0D18";
-
-const ContentContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Content = styled.div`
-  min-height: calc(100vh - 90px);
-  max-width: 400px;
-  width: calc(100vw-90px);
-  box-sizing: content-box;
-
-  color: white;
-  text-align: center;
-
-  margin: 20px;
-  padding: 20px;
-  border: 4px solid ${GOLD};
-  outline-offset: 5px;
-  outline: 4px solid ${GOLD};
-`;
+import { FancyBorder } from "../components/fancyBorder";
 
 const DrinkCategory = styled.div`
   font-family: "Libre Baskerville";
@@ -112,31 +87,28 @@ const DrinksList = styled.div`
 `;
 
 export const Menu = () => {
-  useBackgroundColor(BLUE);
   const aDrinks = Object.values(alcoholicDrinks);
   const naDrinks = Object.values(nonAlcoholicDrinks);
   return (
-    <ContentContainer>
-      <Content>
-        <LOGO></LOGO>
-        <DrinksList>
-          <SearchFilter
-            alcoholicDrinks={aDrinks}
-            nonAlcoholicDrinks={naDrinks}
-            setFilter={() => {}}
-          />
-          <DrinkCategory>Alcoholic</DrinkCategory>
-          <Separator />
-          {aDrinks.map((drink) => (
-            <Drink key={drink.id} drink={drink}></Drink>
-          ))}
-          <DrinkCategory>Non-Alcoholic</DrinkCategory>
-          <Separator />
-          {naDrinks.map((drink) => (
-            <Drink key={drink.id} drink={drink}></Drink>
-          ))}
-        </DrinksList>
-      </Content>
-    </ContentContainer>
+    <FancyBorder>
+      <LOGO></LOGO>
+      <DrinksList>
+        <SearchFilter
+          alcoholicDrinks={aDrinks}
+          nonAlcoholicDrinks={naDrinks}
+          setFilter={() => {}}
+        />
+        <DrinkCategory>Alcoholic</DrinkCategory>
+        <Separator />
+        {aDrinks.map((drink) => (
+          <Drink key={drink.id} drink={drink}></Drink>
+        ))}
+        <DrinkCategory>Non-Alcoholic</DrinkCategory>
+        <Separator />
+        {naDrinks.map((drink) => (
+          <Drink key={drink.id} drink={drink}></Drink>
+        ))}
+      </DrinksList>
+    </FancyBorder>
   );
 };

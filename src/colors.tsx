@@ -8,9 +8,8 @@ export type ColorPalette = {
 };
 
 export const COLORS = {
-  NAVY: "#15214B",
-  WHITE: "#FFFFFF",
-  BLACK: "#000000",
+  GOLD: "#EABC2A",
+  BLUE: "#0B0D18",
 };
 
 export const GRAY_RANGE = {
