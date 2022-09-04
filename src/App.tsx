@@ -1,12 +1,15 @@
 import "./App.css";
 import styled from "styled-components";
 import { useBackgroundColor } from "./hooks/useBackgroundColor";
+import { Cocktail } from "./model/cocktail";
+
+import * as drinks from "./data/cocktails";
 
 const GOLD = "#FFD700";
 const BLUE = "#0B0D18";
 
 const Content = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 90px);
   max-width: 100vw;
   box-sizing: content-box;
 
@@ -22,13 +25,13 @@ const Content = styled.div`
 
 const H1 = styled.div`
   font-family: "Limelight", cursive;
-  font-size: 3rem;
+  font-size: 1.5rem;
 `;
 
 const H2 = styled.div`
   font-family: "Comfortaa", cursive;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1rem;
 `;
 
 const BODY = styled.div`
@@ -41,14 +44,34 @@ const LOGO = styled.img`
   width: 100%;
 `;
 
+const DrinkContainer = styled.div`
+  width: 70vw;
+  margin-bottom: 2em;
+`;
+const Drink = ({ drink }: { drink: Cocktail }) => (
+  <DrinkContainer>
+    <H2>{drink.name}</H2>
+    <BODY>{drink.description}</BODY>
+  </DrinkContainer>
+);
+
+const DrinksList = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
 const App = () => {
   useBackgroundColor(BLUE);
   return (
     <Content>
       <LOGO></LOGO>
-      <H1>Menu</H1>
-      <H2>Drink Category</H2>
-      <BODY>Lorem ipsum</BODY>
+      <DrinksList>
+        {Object.values(drinks).map((drink) => (
+          <Drink key={drink.id} drink={drink}></Drink>
+        ))}
+      </DrinksList>
     </Content>
   );
 };
