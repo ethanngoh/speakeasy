@@ -77,9 +77,28 @@ const DrinkContainer = styled.div`
   margin-bottom: 2.5rem;
 `;
 
+const UnstyledLink = styled.a`
+  &,
+  &:visited,
+  &:hover,
+  &:active {
+    font-style: inherit;
+    color: inherit;
+    background-color: transparent;
+    font-size: inherit;
+    text-decoration: none;
+    font-variant: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    font-family: inherit;
+  }
+`;
+
 const Drink = ({ drink }: { drink: CocktailRaw }) => (
   <DrinkContainer>
-    <H2>{drink.name}</H2>
+    <UnstyledLink href={`/#/recipes/${drink.id}`}>
+      <H2>{drink.name}</H2>
+    </UnstyledLink>
     <BODY>{drink.description}</BODY>
     <SUBBODY>{drink.ingredients.map((i) => i.name).join(", ")}</SUBBODY>
   </DrinkContainer>
