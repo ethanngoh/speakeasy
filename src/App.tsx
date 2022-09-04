@@ -4,6 +4,7 @@ import { useBackgroundColor } from "./hooks/useBackgroundColor";
 import { Cocktail } from "./model/cocktail";
 
 import * as drinks from "./data/cocktails";
+import { GRAY_RANGE } from "./colors";
 
 const GOLD = "#EABC2A";
 const BLUE = "#0B0D18";
@@ -42,12 +43,14 @@ const BODY = styled.div`
   font-size: 1rem;
   margin-bottom: 0.2rem;
   font-family: "Comfortaa", cursive;
+  color: ${GRAY_RANGE[100]};
 `;
 
 const SUBBODY = styled.div`
   line-height: 1rem;
   font-size: 0.8rem;
   font-family: "Comfortaa", cursive;
+  color: ${GRAY_RANGE[200]};
 `;
 
 const LOGO = styled.img`
