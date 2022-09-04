@@ -5,12 +5,19 @@ import { Cocktail } from "./model/cocktail";
 
 import * as drinks from "./data/cocktails";
 
-const GOLD = "#FFD700";
+const GOLD = "#EABC2A";
 const BLUE = "#0B0D18";
+
+const ContentContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Content = styled.div`
   min-height: calc(100vh - 90px);
-  max-width: 100vw;
+  max-width: 400px;
+  width: calc(100vw-90px);
   box-sizing: content-box;
 
   color: white;
@@ -29,29 +36,41 @@ const H1 = styled.div`
 `;
 
 const H2 = styled.div`
-  font-family: "Comfortaa", cursive;
+  font-family: "Limelight", cursive;
+  //   font-family: "Comfortaa", cursive;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
 `;
 
 const BODY = styled.div`
-  font-size: 0.75rem;
-  font-family: "Libre Baskerville", serif;
+  line-height: 1.1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Comfortaa", cursive;
+`;
+
+const SUBBODY = styled.div`
+  line-height: 1rem;
+  font-size: 0.8rem;
+  font-family: "Comfortaa", cursive;
 `;
 
 const LOGO = styled.img`
   content: url("/img/logo.svg");
-  width: 100%;
+  height: 250px;
+  margin-bottom: 1rem;
 `;
 
 const DrinkContainer = styled.div`
-  width: 70vw;
   margin-bottom: 2em;
 `;
+
 const Drink = ({ drink }: { drink: Cocktail }) => (
   <DrinkContainer>
     <H2>{drink.name}</H2>
     <BODY>{drink.description}</BODY>
+    <SUBBODY>{drink.ingredients.map((i) => i.name).join(", ")}</SUBBODY>
   </DrinkContainer>
 );
 
@@ -65,14 +84,16 @@ const DrinksList = styled.div`
 const App = () => {
   useBackgroundColor(BLUE);
   return (
-    <Content>
-      <LOGO></LOGO>
-      <DrinksList>
-        {Object.values(drinks).map((drink) => (
-          <Drink key={drink.id} drink={drink}></Drink>
-        ))}
-      </DrinksList>
-    </Content>
+    <ContentContainer>
+      <Content>
+        <LOGO></LOGO>
+        <DrinksList>
+          {Object.values(drinks).map((drink) => (
+            <Drink key={drink.id} drink={drink}></Drink>
+          ))}
+        </DrinksList>
+      </Content>
+    </ContentContainer>
   );
 };
 
