@@ -1,84 +1,55 @@
-import { Navigation } from "./components/navigation/navigation";
-import { Splash } from "./components/splash";
-import { AboutV2 } from "./components/about";
-import { Contact } from "./components/contact";
-import { Footer } from "./components/footer";
-import SmoothScroll from "smooth-scroll";
 import "./App.css";
 import styled from "styled-components";
-import { ColorKey, COLORS, getColor } from "./colors";
 import { useBackgroundColor } from "./hooks/useBackgroundColor";
-import { useTextColor } from "./hooks/useTextColor";
 
-export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 750,
-  speedAsDuration: true,
-});
+const GOLD = "#FFD700";
+const BLUE = "#0B0D18";
 
-const BoundingBox = ({
-  maxWidth,
-  children,
-}: {
-  maxWidth: string;
-  children: React.ReactNode;
-}) => {
-  return <div style={{ width: "100%", maxWidth }}>{children}</div>;
-};
+const Content = styled.div`
+  min-height: 100vh;
+  max-width: 100vw;
+  box-sizing: content-box;
 
-const CenteredPageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  text-align: center;
+
+  margin: 20px;
+  padding: 20px;
+  border: 4px solid ${GOLD};
+  outline-offset: 5px;
+  outline: 4px solid ${GOLD};
 `;
 
-const RainbowContainer = styled.div`
-  background-image: url("img/banner.svg");
-  background-size: cover;
-  padding-bottom: 300px;
-  width: 100vw;
+const H1 = styled.div`
+  font-family: "Limelight", cursive;
+  font-size: 3rem;
 `;
 
-const CurveContainer = styled.div`
-  background-image: url("img/curve.svg");
-  background-position: top center;
-  background-size: cover;
-  position: relative;
-  top: -200px;
-  padding-top: 50px;
-  width: 100vw;
+const H2 = styled.div`
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
+  font-size: 1.25rem;
+`;
+
+const BODY = styled.div`
+  font-size: 0.75rem;
+  font-family: "Libre Baskerville", serif;
+`;
+
+const LOGO = styled.img`
+  content: url("/img/logo.svg");
+  width: 100%;
 `;
 
 const App = () => {
-  useBackgroundColor(getColor(ColorKey.BACKGROUND));
-  useTextColor(getColor(ColorKey.PRIMARY));
+  useBackgroundColor(BLUE);
   return (
-    <>
-      <RainbowContainer>
-        <CenteredPageContainer>
-          <BoundingBox maxWidth={"1440px"}>
-            <Navigation />
-            <BoundingBox maxWidth="100%">
-              <Splash />
-            </BoundingBox>
-            <BoundingBox maxWidth="100%">
-              <Contact />
-            </BoundingBox>
-          </BoundingBox>
-        </CenteredPageContainer>
-      </RainbowContainer>
-      <CurveContainer>
-        <CenteredPageContainer>
-          <BoundingBox maxWidth="1440px">
-            <BoundingBox maxWidth="100%">
-              <AboutV2 />
-            </BoundingBox>
-            <BoundingBox maxWidth="100%">
-              <Footer />
-            </BoundingBox>
-          </BoundingBox>
-        </CenteredPageContainer>
-      </CurveContainer>
-    </>
+    <Content>
+      <LOGO></LOGO>
+      <H1>Menu</H1>
+      <H2>Drink Category</H2>
+      <BODY>Lorem ipsum</BODY>
+    </Content>
   );
 };
 
