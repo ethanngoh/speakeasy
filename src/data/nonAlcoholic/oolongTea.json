@@ -1,0 +1,23 @@
+{
+  "id": "na2",
+  "name": "Oolong Tea",
+  "description": "High mountain oolong air freighted from Taiwan.",
+  "ingredients": [
+    {
+      "name": "Oolong Leaves",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Hot Water",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Tender Loving Care",
+      "unit": "dash",
+      "value": 1
+    }
+  ],
+  "servingGlassType": "teacup"
+}

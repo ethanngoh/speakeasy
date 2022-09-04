@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { Cocktail } from "../model/cocktail";
 
-import * as drinks from "../data/cocktails";
+import * as alcoholicDrinks from "../data/cocktails";
+import * as nonAlcoholicDrinks from "../data/nonAlcoholic";
 import { GRAY_RANGE } from "../colors";
 
 const GOLD = "#EABC2A";
@@ -28,6 +29,19 @@ const Content = styled.div`
   border: 4px solid ${GOLD};
   outline-offset: 5px;
   outline: 4px solid ${GOLD};
+`;
+
+const DrinkCategory = styled.div`
+  font-family: "Libre Baskerville";
+  font-weight: 700;
+  font-size: 1.5rem;
+`;
+
+const Separator = styled.hr`
+  margin: 1rem 0 1.25rem 0;
+  width: 33%;
+  border: 0;
+  border-top: 1px solid white;
 `;
 
 const H2 = styled.div`
@@ -84,7 +98,14 @@ export const Menu = () => {
       <Content>
         <LOGO></LOGO>
         <DrinksList>
-          {Object.values(drinks).map((drink) => (
+          <DrinkCategory>Alcoholic</DrinkCategory>
+          <Separator />
+          {Object.values(alcoholicDrinks).map((drink) => (
+            <Drink key={drink.id} drink={drink}></Drink>
+          ))}
+          <DrinkCategory>Non-Alcoholic</DrinkCategory>
+          <Separator />
+          {Object.values(nonAlcoholicDrinks).map((drink) => (
             <Drink key={drink.id} drink={drink}></Drink>
           ))}
         </DrinksList>

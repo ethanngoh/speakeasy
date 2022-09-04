@@ -1,0 +1,18 @@
+{
+  "id": "na1",
+  "name": "Water",
+  "description": "Plain old Bellevue tap",
+  "ingredients": [
+    {
+      "name": "Water",
+      "unit": "part",
+      "value": 1
+    },
+    {
+      "name": "Minerals",
+      "unit": "dash",
+      "value": 1
+    }
+  ],
+  "servingGlassType": "pint"
+}
