@@ -1,0 +1,34 @@
+{
+    "id": 1,
+    "name": "Vispillo",
+    "description": "Ahhh yes... 'Vis is your pillow soon.",
+    "ingredients": [
+        {
+            "name": "Gin",
+            "unit": "part",
+            "value": 1.5
+        },
+        {
+            "name": "Vodka",
+            "unit": "part",
+            "value": 0.5
+        },
+        {
+            "name": "Amaro Montenegro",
+            "unit": "part",
+            "value": 0.25
+        },
+        {
+            "name": "Dry Vermouth",
+            "unit": "part",
+            "value": 0.25
+        },
+        {
+            "name": "Lemon Zest",
+            "unit": "count",
+            "value": 1
+        }
+    ],
+    "servingGlassType": "martini",
+    "notes": "Pour in ice, stir, strain; express lemon, garnish with lemon zest."
+}

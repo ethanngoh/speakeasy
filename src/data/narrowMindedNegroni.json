@@ -1,0 +1,24 @@
+{
+    "id": 1,
+    "name": "Narrow-minded Negroni",
+    "description": "Jck and GSL drink of choice.",
+    "ingredients": [
+        {
+            "name": "Gin",
+            "unit": "part",
+            "value": 1
+        },
+        {
+            "name": "Campari",
+            "unit": "part",
+            "value": 1
+        },
+        {
+            "name": "Sweet Vermouth",
+            "unit": "part",
+            "value": 1
+        }
+    ],
+    "servingGlassType": "lowball",
+    "notes": "Shake in ice to chill the drink. Strain away ice."
+}

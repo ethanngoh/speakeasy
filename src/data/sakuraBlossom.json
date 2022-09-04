@@ -1,0 +1,34 @@
+{
+    "id": 1,
+    "name": "Sakura Blossom",
+    "description": "Mixologist Ethan's weeb tangent.",
+    "ingredients": [
+        {
+            "name": "Gin",
+            "unit": "part",
+            "value": 1
+        },
+        {
+            "name": "St. Germain",
+            "unit": "part",
+            "value": 1
+        },
+        {
+            "name": "Aperol",
+            "unit": "part",
+            "value": 0.33
+        },
+        {
+            "name": "Simple Syrup",
+            "unit": "part",
+            "value": 0.66
+        },
+        {
+            "name": "Yakult",
+            "unit": "part",
+            "value": 2
+        }
+    ],
+    "servingGlassType": "highball",
+    "notes": "Highball filled with ice."
+}
