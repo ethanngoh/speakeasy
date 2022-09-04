@@ -1,24 +1,24 @@
 {
-    "id": 1,
-    "name": "Wikimedia Gimlet",
-    "description": "Gin, St. Germain, Lime",
-    "ingredients": [
-        {
-            "name": "Gin",
-            "unit": "part",
-            "value": 2
-        },
-        {
-            "name": "St. Germain",
-            "unit": "part",
-            "value": 1.5
-        },
-        {
-            "name": "Lime Juice",
-            "unit": "part",
-            "value": 0.5
-        }
-    ],
-    "servingGlassType": "martini",
-    "notes": "Shake in ice to chill the drink. Strain away ice."
+  "id": "1",
+  "name": "Wikimedia Gimlet",
+  "description": "Gin, St. Germain, Lime",
+  "ingredients": [
+    {
+      "name": "Gin",
+      "unit": "part",
+      "value": 2
+    },
+    {
+      "name": "St. Germain",
+      "unit": "part",
+      "value": 1.5
+    },
+    {
+      "name": "Lime Juice",
+      "unit": "part",
+      "value": 0.5
+    }
+  ],
+  "servingGlassType": "martini",
+  "notes": "Shake in ice to chill the drink. Strain away ice."
 }
