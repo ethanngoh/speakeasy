@@ -26,7 +26,9 @@ export const Splash = () => {
     <SplashContainer>
       <SplashTextContainer>
         <TagLine>Your dedicated back office</TagLine>
-        <OneLiner>We simplify the complexity and hassle of managing your own team</OneLiner>
+        <OneLiner>
+          We simplify the complexity and hassle of managing your own team
+        </OneLiner>
       </SplashTextContainer>
     </SplashContainer>
   );

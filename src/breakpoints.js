@@ -4,7 +4,7 @@ const size = {
   md: "768px",
   lg: "992px",
   xl: "1200px",
-  xxl: "1400px"
+  xxl: "1400px",
 };
 
 export const breakpoint = {
@@ -13,5 +13,5 @@ export const breakpoint = {
   md: `(min-width: ${size.md})`,
   lg: `(min-width: ${size.lg})`,
   xl: `(min-width: ${size.xl})`,
-  xxl: `(min-width: ${size.xxl})`
+  xxl: `(min-width: ${size.xxl})`,
 };

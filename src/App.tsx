@@ -12,10 +12,16 @@ import { useTextColor } from "./hooks/useTextColor";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 750,
-  speedAsDuration: true
+  speedAsDuration: true,
 });
 
-const BoundingBox = ({ maxWidth, children }: { maxWidth: string; children: React.ReactNode }) => {
+const BoundingBox = ({
+  maxWidth,
+  children,
+}: {
+  maxWidth: string;
+  children: React.ReactNode;
+}) => {
   return <div style={{ width: "100%", maxWidth }}>{children}</div>;
 };
 

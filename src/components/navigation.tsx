@@ -60,7 +60,13 @@ const NavBrandContainer = styled.div`
   align-items: center;
 `;
 
-const Nav = ({ left, right }: { left: React.ReactNode; right: React.ReactNode }) => {
+const Nav = ({
+  left,
+  right,
+}: {
+  left: React.ReactNode;
+  right: React.ReactNode;
+}) => {
   return (
     <NavFixedPositon>
       <NavContainer>
