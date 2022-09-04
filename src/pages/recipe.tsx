@@ -21,7 +21,7 @@ export const Recipe = () => {
     return <>ID CONFLICT</>;
   }
 
-  const appropriateDrink = allOptions[0];
+  const appropriateDrink: CocktailRaw = allOptions[0];
 
   return (
     <>
