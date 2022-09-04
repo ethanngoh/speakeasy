@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Cocktail } from "../model/cocktail";
+import { CocktailRaw } from "../model/cocktail";
 import * as drinks from "../data/cocktails";
 
 const DrinkContainer = styled.div`
@@ -11,7 +11,7 @@ const DrinkTitle = styled.div`
   font-weight: bold;
 `;
 
-const DrinkInstructions = ({ drink }: { drink: Cocktail }) => (
+const DrinkInstructions = ({ drink }: { drink: CocktailRaw }) => (
   <DrinkContainer>
     <DrinkTitle>{drink.name}</DrinkTitle>
     <div>{drink.description}</div>

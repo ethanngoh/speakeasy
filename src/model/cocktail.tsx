@@ -4,7 +4,7 @@ export interface Ingredient {
   value: number;
 }
 
-export interface Cocktail {
+export interface CocktailRaw {
   id: string;
   name: string;
   description: string;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
-import { Cocktail } from "../model/cocktail";
+import { CocktailRaw } from "../model/cocktail";
 
 import * as alcoholicDrinks from "../data/cocktails";
 import * as nonAlcoholicDrinks from "../data/nonAlcoholic";
@@ -77,7 +77,7 @@ const DrinkContainer = styled.div`
   margin-bottom: 2.5rem;
 `;
 
-const Drink = ({ drink }: { drink: Cocktail }) => (
+const Drink = ({ drink }: { drink: CocktailRaw }) => (
   <DrinkContainer>
     <H2>{drink.name}</H2>
     <BODY>{drink.description}</BODY>
@@ -104,6 +104,7 @@ export const Menu = () => {
           <SearchFilter
             alcoholicDrinks={aDrinks}
             nonAlcoholicDrinks={naDrinks}
+            setFilter={() => {}}
           />
           <DrinkCategory>Alcoholic</DrinkCategory>
           <Separator />

@@ -1,6 +1,6 @@
-import Select from "react-select";
+import Select, { ActionMeta, MultiValue } from "react-select";
 import styled from "styled-components";
-import { Cocktail } from "../model/cocktail";
+import { CocktailRaw } from "../model/cocktail";
 
 const filterOptions = [
   { value: "non-alcoholic", label: "Non-Alcoholic" },
@@ -17,13 +17,17 @@ const SearchFilterContainer = styled.div`
   margin-bottom: 2rem;
   color: #000;
 `;
+type RawDrinkType = any;
+type SelectOption = { value: string; label: string };
 
 export const SearchFilter = ({
   alcoholicDrinks,
   nonAlcoholicDrinks,
+  setFilter,
 }: {
-  alcoholicDrinks: Cocktail[];
-  nonAlcoholicDrinks: Cocktail[];
+  alcoholicDrinks: CocktailRaw[];
+  nonAlcoholicDrinks: CocktailRaw[];
+  setFilter: React.Dispatch<React.SetStateAction<RawDrinkType>>;
 }) => {
   const options = [
     ...filterOptions,
@@ -50,6 +54,12 @@ export const SearchFilter = ({
         className="drink-filter-select"
         classNamePrefix="select"
         placeholder="Type drink keywords"
+        onChange={(
+          newValue: MultiValue<SelectOption>,
+          actionMeta: ActionMeta<SelectOption>
+        ) => {
+          setFilter(newValue);
+        }}
       />
     </SearchFilterContainer>
   );
