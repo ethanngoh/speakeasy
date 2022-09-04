@@ -5,6 +5,7 @@ import { Cocktail } from "../model/cocktail";
 import * as alcoholicDrinks from "../data/cocktails";
 import * as nonAlcoholicDrinks from "../data/nonAlcoholic";
 import { GRAY_RANGE } from "../colors";
+import { SearchFilter } from "../components/searchFilter";
 
 const GOLD = "#EABC2A";
 const BLUE = "#0B0D18";
@@ -93,19 +94,25 @@ const DrinksList = styled.div`
 
 export const Menu = () => {
   useBackgroundColor(BLUE);
+  const aDrinks = Object.values(alcoholicDrinks);
+  const naDrinks = Object.values(nonAlcoholicDrinks);
   return (
     <ContentContainer>
       <Content>
         <LOGO></LOGO>
         <DrinksList>
+          <SearchFilter
+            alcoholicDrinks={aDrinks}
+            nonAlcoholicDrinks={naDrinks}
+          />
           <DrinkCategory>Alcoholic</DrinkCategory>
           <Separator />
-          {Object.values(alcoholicDrinks).map((drink) => (
+          {aDrinks.map((drink) => (
             <Drink key={drink.id} drink={drink}></Drink>
           ))}
           <DrinkCategory>Non-Alcoholic</DrinkCategory>
           <Separator />
-          {Object.values(nonAlcoholicDrinks).map((drink) => (
+          {naDrinks.map((drink) => (
             <Drink key={drink.id} drink={drink}></Drink>
           ))}
         </DrinksList>
