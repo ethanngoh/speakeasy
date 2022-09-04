@@ -1,19 +1,19 @@
 {
-    "id": 1,
-    "name": "Goddaddy",
-    "description": "Almonds & Whiskey",
-    "ingredients": [
-        {
-            "name": "Whiskey",
-            "unit": "part",
-            "value": 2
-        },
-        {
-            "name": "Amaretto",
-            "unit": "part",
-            "value": 0.25
-        }
-    ],
-    "servingGlassType": "lowball",
-    "notes": "Stir in ice to chill drink. Strain away ice."
+  "id": "6",
+  "name": "Goddaddy",
+  "description": "Almonds & Whiskey",
+  "ingredients": [
+    {
+      "name": "Whiskey",
+      "unit": "part",
+      "value": 2
+    },
+    {
+      "name": "Amaretto",
+      "unit": "part",
+      "value": 0.25
+    }
+  ],
+  "servingGlassType": "lowball",
+  "notes": "Stir in ice to chill drink. Strain away ice."
 }

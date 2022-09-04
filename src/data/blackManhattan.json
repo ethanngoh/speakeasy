@@ -1,25 +1,25 @@
 {
-  "id": "9",
-  "name": "Narrow-minded Negroni",
-  "description": "Jck and GSL drink of choice.",
+  "id": "14",
+  "name": "Black Manhattan",
+  "description": "Darkness never sets in over New York City.",
   "ingredients": [
     {
-      "name": "Gin",
+      "name": "Whiskey",
+      "unit": "part",
+      "value": 2
+    },
+    {
+      "name": "Amaro Montenegro",
       "unit": "part",
       "value": 1
     },
     {
-      "name": "Campari",
-      "unit": "part",
+      "name": "Angastura Bitters",
+      "unit": "dash",
       "value": 1
     },
     {
-      "name": "Sweet Vermouth",
-      "unit": "part",
-      "value": 1
-    },
-    {
-      "name": "Orange Zest",
+      "name": "Maraschino Cherry",
       "unit": "count",
       "value": 1
     }

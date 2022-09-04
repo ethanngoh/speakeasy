@@ -1,7 +1,7 @@
 {
-  "id": "9",
-  "name": "Narrow-minded Negroni",
-  "description": "Jck and GSL drink of choice.",
+  "id": "13",
+  "name": "Amaro Negroni",
+  "description": "Negroni when you're out of Campari.",
   "ingredients": [
     {
       "name": "Gin",
@@ -9,18 +9,13 @@
       "value": 1
     },
     {
-      "name": "Campari",
+      "name": "Amaro Montenegro",
       "unit": "part",
       "value": 1
     },
     {
       "name": "Sweet Vermouth",
       "unit": "part",
-      "value": 1
-    },
-    {
-      "name": "Orange Zest",
-      "unit": "count",
       "value": 1
     }
   ],

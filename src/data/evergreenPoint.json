@@ -1,31 +1,29 @@
 {
-    "id": 1,
-    "name": "Evergreen Point",
-    "description": "Chartreuse Manhattan",
-    "ingredients": [
-        {
-            "name": "American Whiskey",
-            "parts": 2
-        },
-        {
-            "name": "Chartreuse",
-            "parts": 0.5
-        },
-        {
-            "name": "Sweet Vermouth",
-            "parts": 0.5
-        },
-        {
-            "name": "Sweet Vermouth",
-            "parts": 0,
-            "dash": 1
-        },
-        {
-            "name": "Orange Bitters",
-            "parts": 0,
-            "dash": 1
-        }
-    ],
-    "servingGlassType": "lowball",
-    "notes": "Stir in ice to chill drink, serve with lemon peel garnish"
+  "id": "4",
+  "name": "Evergreen Point",
+  "description": "Chartreuse Manhattan",
+  "ingredients": [
+    {
+      "name": "American Whiskey",
+      "unit": "part",
+      "value": 2
+    },
+    {
+      "name": "Chartreuse",
+      "unit": "part",
+      "value": 0.5
+    },
+    {
+      "name": "Sweet Vermouth",
+      "unit": "part",
+      "value": 0.5
+    },
+    {
+      "name": "Orange Bitters",
+      "unit": "dash",
+      "value": 1
+    }
+  ],
+  "servingGlassType": "lowball",
+  "notes": "Stir in ice to chill drink, serve with lemon peel garnish"
 }
