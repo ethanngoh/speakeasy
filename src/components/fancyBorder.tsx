@@ -8,7 +8,6 @@ const ContentContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  max-width: 500px;
   min-height: 100vh;
 `;
 
@@ -22,6 +21,7 @@ const Content = styled.div`
 
   margin: 20px;
   padding: 20px;
+  max-width: 500px;
   border: 4px solid ${COLORS.GOLD};
   outline-offset: 5px;
   outline: 4px solid ${COLORS.GOLD};
