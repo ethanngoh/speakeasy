@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import React, { PropsWithChildren } from "react";
 import { COLORS } from "../colors";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";

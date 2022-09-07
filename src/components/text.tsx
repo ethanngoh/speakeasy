@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { GRAY_RANGE } from "../colors";
 
 export const Separator = styled.hr`

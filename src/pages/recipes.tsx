@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { CocktailRaw } from "../model/cocktail";
 import * as drinks from "../data/cocktails";
 

@@ -1,5 +1,5 @@
 import Select, { ActionMeta, MultiValue } from "react-select";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { CocktailRaw } from "../model/cocktail";
 
 const filterOptions = [
@@ -54,10 +54,7 @@ export const SearchFilter = ({
         className="drink-filter-select"
         classNamePrefix="select"
         placeholder="Type drink keywords"
-        onChange={(
-          newValue: MultiValue<SelectOption>,
-          actionMeta: ActionMeta<SelectOption>
-        ) => {
+        onChange={(newValue: MultiValue<SelectOption>, actionMeta: ActionMeta<SelectOption>) => {
           setFilter(newValue);
         }}
       />
