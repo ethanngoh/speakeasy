@@ -73,7 +73,10 @@ export const SearchFilter = ({
         name="filters"
         options={options}
         placeholder="Type drink keywords"
-        onChange={(newValue: MultiValue<SelectOption>, actionMeta: ActionMeta<SelectOption>) => {
+        onChange={(
+          newValue: MultiValue<SelectOption>,
+          actionMeta: ActionMeta<SelectOption>
+        ) => {
           setFilter(newValue);
         }}
         styles={customStyle}

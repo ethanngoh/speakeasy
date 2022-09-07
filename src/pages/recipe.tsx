@@ -28,7 +28,9 @@ const RecipeForDrink = ({ drink }: { drink: CocktailRaw }) => {
           <Separator />
           <SUBBODY>
             <div style={{ fontSize: "1rem" }}>
-              <div style={{ marginBottom: ".75rem" }}>Serve in {drink.servingGlassType}.</div>
+              <div style={{ marginBottom: ".75rem" }}>
+                Serve in {drink.servingGlassType}.
+              </div>
               {drink.ingredients.map((ingredient) => (
                 <div>
                   {ingredient.name} ({ingredient.value} {ingredient.unit})
@@ -47,9 +49,13 @@ export const Recipe = () => {
   let params = useParams();
   const { cocktailId } = params;
 
-  const aOptions = Object.values(alcoholicDrinks).filter((d) => d.id === cocktailId);
+  const aOptions = Object.values(alcoholicDrinks).filter(
+    (d) => d.id === cocktailId
+  );
 
-  const naOptions = Object.values(nonAlcoholicDrinks).filter((d) => d.id === cocktailId);
+  const naOptions = Object.values(nonAlcoholicDrinks).filter(
+    (d) => d.id === cocktailId
+  );
 
   const allOptions = aOptions.concat(naOptions);
   if (allOptions.length !== 1) {

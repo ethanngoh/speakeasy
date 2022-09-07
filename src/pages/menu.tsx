@@ -64,7 +64,11 @@ export const Menu = () => {
     <FancyBorder>
       <LOGO></LOGO>
       <DrinksList>
-        <SearchFilter alcoholicDrinks={aDrinks} nonAlcoholicDrinks={naDrinks} setFilter={() => {}} />
+        <SearchFilter
+          alcoholicDrinks={aDrinks}
+          nonAlcoholicDrinks={naDrinks}
+          setFilter={() => {}}
+        />
         <DrinkCategory>Alcoholic</DrinkCategory>
         <Separator />
         {aDrinks.map((drink) => (
