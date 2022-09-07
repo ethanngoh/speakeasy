@@ -1,6 +1,7 @@
 import Select, { ActionMeta, MultiValue } from "react-select";
 import styled from "@emotion/styled";
 import { CocktailRaw } from "../model/cocktail";
+import { COLORS, GRAY_RANGE } from "../colors";
 
 const filterOptions = [
   { value: "non-alcoholic", label: "Non-Alcoholic" },
@@ -45,18 +46,37 @@ export const SearchFilter = ({
     }),
   ];
 
+  const customStyle = {
+    option: (provided: any, state: any) => ({
+      ...provided,
+      borderBottom: `1px solid ${GRAY_RANGE[300]}`,
+      color: state.isSelected ? GRAY_RANGE[700] : GRAY_RANGE[100],
+      backgroundColor: GRAY_RANGE[800],
+      padding: "0.75rem",
+    }),
+    control: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: COLORS.BLUE,
+      border: `1px solid ${GRAY_RANGE[0]}`,
+    }),
+    menuList: (provided: any, state: any) => ({
+      ...provided,
+      padding: 0,
+      border: `1px solid ${GRAY_RANGE[300]}`,
+    }),
+  };
+
   return (
     <SearchFilterContainer>
       <Select
         isMulti
         name="filters"
         options={options}
-        className="drink-filter-select"
-        classNamePrefix="select"
         placeholder="Type drink keywords"
         onChange={(newValue: MultiValue<SelectOption>, actionMeta: ActionMeta<SelectOption>) => {
           setFilter(newValue);
         }}
+        styles={customStyle}
       />
     </SearchFilterContainer>
   );
