@@ -8,8 +8,6 @@ import { FancyBorder } from "../components/fancyBorder";
 import { HEADING, BODY, SUBBODY, Separator } from "../components/text";
 import { useMemo, useState } from "react";
 import { MultiValue } from "react-select";
-import Select from "react-select/dist/declarations/src/Select";
-import { debug } from "console";
 
 const DrinkCategory = styled.div`
   font-family: "Libre Baskerville";
