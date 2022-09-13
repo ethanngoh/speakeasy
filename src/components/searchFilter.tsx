@@ -18,8 +18,8 @@ const SearchFilterContainer = styled.div`
   margin-bottom: 2rem;
   color: #000;
 `;
-type RawDrinkType = any;
-type SelectOption = { value: string; label: string };
+export type SelectOption = { value: string; label: string };
+export type SetFilterType = (filters: MultiValue<SelectOption>) => void;
 
 export const SearchFilter = ({
   alcoholicDrinks,
@@ -28,7 +28,7 @@ export const SearchFilter = ({
 }: {
   alcoholicDrinks: CocktailRaw[];
   nonAlcoholicDrinks: CocktailRaw[];
-  setFilter: React.Dispatch<React.SetStateAction<RawDrinkType>>;
+  setFilter: SetFilterType;
 }) => {
   const options = [
     ...filterOptions,

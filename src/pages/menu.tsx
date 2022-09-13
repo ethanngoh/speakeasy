@@ -3,9 +3,13 @@ import { CocktailRaw } from "../model/cocktail";
 
 import * as alcoholicDrinks from "../data/cocktails";
 import * as nonAlcoholicDrinks from "../data/nonAlcoholic";
-import { SearchFilter } from "../components/searchFilter";
+import { SearchFilter, SelectOption } from "../components/searchFilter";
 import { FancyBorder } from "../components/fancyBorder";
 import { HEADING, BODY, SUBBODY, Separator } from "../components/text";
+import { useMemo, useState } from "react";
+import { MultiValue } from "react-select";
+import Select from "react-select/dist/declarations/src/Select";
+import { debug } from "console";
 
 const DrinkCategory = styled.div`
   font-family: "Libre Baskerville";
@@ -60,25 +64,74 @@ const DrinksList = styled.div`
 export const Menu = () => {
   const aDrinks = Object.values(alcoholicDrinks);
   const naDrinks = Object.values(nonAlcoholicDrinks);
+
+  const [filters, setFilters] = useState<MultiValue<SelectOption>>([]);
+
+  const filterDrinksList = (
+    unfilteredDrinks: CocktailRaw[],
+    isAlcoholic: boolean,
+    filters: MultiValue<SelectOption>
+  ): CocktailRaw[] => {
+    const ans = unfilteredDrinks.filter((drink) => {
+      return filters.every((filter) => {
+        // This is the heart and soul of the filtering logic.
+        // We determine here if a drink passes the filter.
+        if (filter.value === "non-alcoholic") {
+          return !isAlcoholic;
+        }
+
+        if (filter.value === "alcoholic") {
+          return isAlcoholic;
+        }
+
+        if (drink.ingredients.map((i) => i.name).includes(filter.label)) {
+          return true;
+        }
+
+        if (drink.name === filter.label) {
+          return true;
+        }
+
+        return false;
+      });
+    });
+
+    return ans;
+  };
+
+  const filteredADrinks = useMemo(
+    () => filterDrinksList(aDrinks, true, filters),
+    [filters, aDrinks]
+  );
+
+  const filteredNADrinks = useMemo(
+    () => filterDrinksList(naDrinks, false, filters),
+    [filters, naDrinks]
+  );
+
   return (
     <FancyBorder>
       <LOGO></LOGO>
       <DrinksList>
-        <SearchFilter
-          alcoholicDrinks={aDrinks}
-          nonAlcoholicDrinks={naDrinks}
-          setFilter={() => {}}
-        />
-        <DrinkCategory>Alcoholic</DrinkCategory>
-        <Separator />
-        {aDrinks.map((drink) => (
-          <Drink key={drink.id} drink={drink}></Drink>
-        ))}
-        <DrinkCategory>Non-Alcoholic</DrinkCategory>
-        <Separator />
-        {naDrinks.map((drink) => (
-          <Drink key={drink.id} drink={drink}></Drink>
-        ))}
+        <>
+          <SearchFilter
+            alcoholicDrinks={aDrinks}
+            nonAlcoholicDrinks={naDrinks}
+            setFilter={(f) => {
+              setFilters(f);
+            }}
+          />
+          <DrinkCategory>Alcoholic</DrinkCategory>
+          <Separator />
+          {filteredADrinks.map((drink) => (
+            <Drink key={drink.id} drink={drink}></Drink>
+          ))}
+          <DrinkCategory>Non-Alcoholic</DrinkCategory>
+          <Separator />
+          {filteredNADrinks.map((drink) => (
+            <Drink key={drink.id} drink={drink}></Drink>
+          ))}
+        </>
       </DrinksList>
     </FancyBorder>
   );

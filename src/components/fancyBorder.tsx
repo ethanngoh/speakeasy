@@ -22,7 +22,8 @@ const Content = styled.div`
   color: white;
   text-align: center;
 
-  max-width: 500px;
+  width: 500px;
+  max-width: 100vw;
   border: 4px solid ${COLORS.GOLD};
   outline-offset: 5px;
   outline: 4px solid ${COLORS.GOLD};
